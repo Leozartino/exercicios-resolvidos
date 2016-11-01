@@ -31,15 +31,6 @@ void liberar_lista(ListaVet* lista) {
 	delete lista;		
 }
 
-ListaVet* clonar_lista(ListaVet* li) {
-	assert(li != NULL);
-	ListaVet* clone = criar_lista();
-	for(int i = 0; i < obter_tamanho(li); i++) {
-		inserir(clone, obter(li, i), i);
-	}
-	return clone;
-}
-
 bool estah_cheia(ListaVet* lista) {
 	assert(lista != NULL);	
     

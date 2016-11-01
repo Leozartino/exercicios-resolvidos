@@ -89,7 +89,7 @@ ListaVet* criar_lista();
  * 
  * \warning O programa será abortado, caso o ponteiro \p *li seja igual a \p NULL.
  */
-ListaVet* clonar_lista(ListaVet* li);
+ 
 
 /** 
  * \brief Libera o espaço de memória anteriormente reservado para a lista.

@@ -1,3 +1,4 @@
+#include <cstdlib> /* Permite o uso da constante EXIT_SUCCESS */
 #include <iostream>
 #include "listavet.hpp"
 
@@ -11,18 +12,7 @@ void imprimir(ListaVet* li) {
 }
 
 int main() {
-	ListaVet* li = criar_lista();
-	inserir(li, 1, 0);	
-	inserir(li, 2, 0);
-	inserir(li, 3, 0);	
 	
-	
-	ListaVet* clone = clonar_lista(li);
-	
-	imprimir(li);
-	imprimir(clone); 
-	
-	
-	return 0;
+	return EXIT_SUCCESS;
 }
 
