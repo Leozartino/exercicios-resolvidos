@@ -1,9 +1,3 @@
-# O trecho abaixo permite que arquivos sem extensão sejam ignorados
-*
-!*/
-!*.*
-!*/*.*
-
 # Object files
 *.o
 *.ko
