@@ -20,6 +20,18 @@ ListaVet* criar_lista() {
 	return lista;
 }
 
+ListaVet* clonar_lista(ListaVet* li) {
+	assert(li != NULL);
+	
+	ListaVet* clone = criar_lista();
+	
+	for(int i = 0; i < obter_tamanho(li); i++) {
+		inserir(clone, obter(li, i), i);
+	}
+	
+	return clone;
+}
+
 void liberar_lista(ListaVet* lista) {
 	/* 
 	 * Macro da biblioteca \file assert.h. Aborta a execução do programa e envia uma mensagem 

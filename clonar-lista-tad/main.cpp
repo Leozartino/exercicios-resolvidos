@@ -12,6 +12,18 @@ void imprimir(ListaVet* li) {
 }
 
 int main() {
+	ListaVet* lOriginal = criar_lista();
+	
+	inserir(lOriginal, 3, 0);
+	inserir(lOriginal, 2, 0);
+	inserir(lOriginal, 1, 0);
+	
+	ListaVet* lClone = clonar_lista(lOriginal);
+	
+	imprimir(lOriginal);
+	imprimir(lClone);
+	
+	
 	return EXIT_SUCCESS;
 }
 
