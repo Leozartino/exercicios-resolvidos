@@ -78,17 +78,17 @@ int remover(ListaVet* lista, int pos) {
 }
 
 int remover_min(ListaVet* li) {
-		assert(li != NULL);
-		assert(!estah_vazia(li));
+	assert(li != NULL);
+	assert(!estah_vazia(li));
 		
-		int pos_min = 0;
-		for(int i = 1; i < li->ultimo; i++) {
-				if (li->itens[i] < li->itens[pos_min]) {
-						pos_min = i;
-				}
+	int pos_min = 0;
+	for(int i = 1; i < li->ultimo; i++) {
+		if (li->itens[i] < li->itens[pos_min]) {
+			pos_min = i;
 		}
+	}
 		
-		return remover(li, pos_min);
+	return remover(li, pos_min);
 }
 
 int obter(ListaVet* lista, int pos) {
