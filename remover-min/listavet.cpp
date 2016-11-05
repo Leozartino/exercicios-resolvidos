@@ -68,13 +68,13 @@ int remover(ListaVet* lista, int pos) {
         
 	int item = lista->itens[pos];
     
-    /* Laço responsável por deslocar os elementos da lista uma posição para a esquerda. */
-    for(int i = pos; i < (lista->ultimo - 1); i++)  {
-        lista->itens[i] = lista->itens[i + 1];
-    }
+	/* Laço responsável por deslocar os elementos da lista uma posição para a esquerda. */
+	for(int i = pos; i < (lista->ultimo - 1); i++)  {
+		lista->itens[i] = lista->itens[i + 1];
+	}
     
-    lista->ultimo--;
-    return item;   
+	lista->ultimo--;
+	return item;   
 }
 
 int remover_min(ListaVet* li) {
