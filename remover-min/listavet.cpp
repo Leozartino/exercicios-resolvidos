@@ -20,27 +20,6 @@ ListaVet* criar_lista() {
 	return lista;
 }
 
-int obter_pos_min(ListaVet* li) {
-	assert(li != NULL);
-	if (estah_vazia(li)) {
-		return -1;
-	}
-	
-	int posmin = 0;
-	for(int i = 1; i < li->ultimo; i++) {
-			if (li->itens[i] < li->itens[posmin]) {
-				posmin = i;
-			}
-	} 
-	return posmin;
-}
-
-int remover_min(ListaVet* li) {
-	int posmin = obter_pos_min(li);
-	assert(posmin != -1);
-	return remover(li, posmin);
-}
-
 void liberar_lista(ListaVet* lista) {
 	/* 
 	 * Macro da biblioteca \file assert.h. Aborta a execução do programa e envia uma mensagem 
@@ -96,6 +75,20 @@ int remover(ListaVet* lista, int pos) {
     
     lista->ultimo--;
     return item;   
+}
+
+int remover_min(ListaVet* li) {
+		assert(li != NULL);
+		assert(!estah_vazia(li));
+		
+		int pos_min = 0;
+		for(int i = 1; i < li->ultimo; i++) {
+				if (li->itens[i] < li->itens[pos_min]) {
+						pos_min = i;
+				}
+		}
+		
+		return remover(li, pos_min);
 }
 
 int obter(ListaVet* lista, int pos) {

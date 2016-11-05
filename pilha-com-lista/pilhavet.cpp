@@ -35,13 +35,13 @@ void liberar_pilha(PilhaVet* pilha) {
 bool estah_cheia(PilhaVet* pilha) {
 	assert(pilha != NULL);	
     
-	return (estah_cheia(pilha->itens));
+	return estah_cheia(pilha->itens);
 }
 
 bool estah_vazia(PilhaVet* pilha) {
 	assert(pilha != NULL);	
 	
-	return (estah_vazia(pilha->itens));
+	return estah_vazia(pilha->itens);
 }
 
 void empilhar(PilhaVet* pilha, int item) {
