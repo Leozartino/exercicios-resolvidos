@@ -51,12 +51,12 @@ void inserir(ListaVet* lista, int item, int pos) {
 	assert((pos >= 0) && (pos <= lista->ultimo));   
     
 	/* Laço responsável por deslocar os elementos da lista uma posição para a direita. */
-    for(int i = lista->ultimo; i > pos; i--)  {
-        lista->itens[i] = lista->itens[i - 1];
-    }
+	for(int i = lista->ultimo; i > pos; i--)  {
+		lista->itens[i] = lista->itens[i - 1];
+	}
     
-    lista->itens[pos] = item;
-    lista->ultimo++;
+	lista->itens[pos] = item;
+	lista->ultimo++;
 }
 
 int remover(ListaVet* lista, int pos) {
