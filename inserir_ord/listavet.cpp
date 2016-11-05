@@ -59,20 +59,18 @@ void inserir(ListaVet* lista, int item, int pos) {
     lista->ultimo++;
 }
 
-int obter_pos_inserir_ord(ListaVet* li, int item) {
-	assert(li != NULL);
-	
-	int pos = 0;
-	for(; pos < li->ultimo; pos++) {
-		if (item < li->itens[pos]) {
-			return pos;
-		}
-	}
-	return pos;
-}
-
 void inserir_ord(ListaVet* li, int item) {
-	inserir(li, item, obter_pos_inserir_ord(li, item));
+	assert(li != NULL);
+	assert(!estah_cheia(li));
+	
+	int i = li->ultimo;
+	while((i > 0) && (item < li->itens[i - 1])) {
+		li->itens[i] = li->itens[i - 1]; 
+		i--;
+	}
+	
+	li->itens[i] = item;
+	li->ultimo++;
 }
 	
 int remover(ListaVet* lista, int pos) {
