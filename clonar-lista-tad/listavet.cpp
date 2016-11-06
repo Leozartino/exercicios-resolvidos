@@ -25,9 +25,10 @@ ListaVet* clonar_lista(ListaVet* li) {
 	
 	ListaVet* clone = criar_lista();
 	
-	for(int i = 0; i < obter_tamanho(li); i++) {
-		inserir(clone, obter(li, i), i);
+	for(int i = 0; i < li->ultimo; i++) {
+		clone->itens[i] = li->itens[i];
 	}
+	clone->ultimo = li->ultimo;
 	
 	return clone;
 }
